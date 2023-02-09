@@ -405,6 +405,12 @@ view: 10TB___GBQ {
     }
 
 
+    measure: DIVIDE {
+        label: "DIVIDE"
+        type: average
+        sql: ${TABLE}.`DIVIDE`;;
+    }
+
     measure: m_SS_CUSTOMER_SK_count {
         label: "Store Customer Count"
         group_label: "Customer Information"
