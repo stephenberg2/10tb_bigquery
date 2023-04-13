@@ -12,10 +12,9 @@ connection: "looker_sb_gbq"
 label: "10TB - GBQ"
 
 
-include: "/views/10TB_-_GBQ/10TB_-_GBQ.view.lkml"
+include: "/views/10TB_-_GBQ/*"
 
 
 explore: 10TB___GBQ {
   label: "10TB - GBQ"
 }
-
