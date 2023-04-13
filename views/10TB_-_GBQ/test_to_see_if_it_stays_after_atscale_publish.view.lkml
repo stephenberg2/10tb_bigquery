@@ -1,4 +1,6 @@
 view: test_to_see_if_it_stays_after_atscale_publish {
+  label: "10TB - GBQ"
+  sql_table_name: "10TB - GBQ"."10TB - GBQ";;
   measure: m_store_sales_price_2{
     label: "Store Sales Price 2"
     group_label: "Store Sales Measures"
