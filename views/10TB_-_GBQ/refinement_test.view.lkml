@@ -19,5 +19,19 @@ view: +10TB___GBQ{
           ;;
   }
 
-
+  measure: m_store_sales_price_formatted{
+    label: "Store Sales Price Formatted"
+    group_label: "Store Sales Measures"
+    type: sum
+    sql: ${TABLE}.`m_store_sales_price`;;
+    value_format: "$#,##0.00"
+    html:
+    {% if value > 104000000000.00 %}
+    <span style="color:darkgreen;">{{ rendered_value }}</span>
+    {% elsif value > 100000000000.00 %}
+    <span style="color:goldenrod;">{{ rendered_value }}</span>
+    {% else %}
+    <span style="color:darkred;">{{ rendered_value }}</span>
+    {% endif %} ;;
+  }
   }
