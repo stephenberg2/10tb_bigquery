@@ -18,3 +18,6 @@ include: "/views/10TB_-_GBQ/test_to_see_if_it_stays_after_atscale_publish.view.l
 explore: 10TB___GBQ {
   label: "10TB - GBQ"
 }
+explore: test_to_see_if_it_stays_after_atscale_publish {
+  label: "10TB - GBQ"
+}
