@@ -13,9 +13,9 @@ label: "10TB - GBQ"
 
 
 include: "/views/10TB_-_GBQ/10TB_-_GBQ.view.lkml"
+include: "/views/10TB_-_GBQ/test_to_see_if_it_stays_after_atscale_publish.view.lkml"
 
 
 explore: 10TB___GBQ {
   label: "10TB - GBQ"
 }
-
