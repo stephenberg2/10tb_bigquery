@@ -19,39 +19,5 @@ view: +10TB___GBQ{
           ;;
   }
 
-  dimension: Date_Dimension_Sold_Time_Dimension_Converted {
-    label: " Sold Date Converted"
-    group_label: "Date Attributes.Sold Date Dimension"
-    datatype: date
-    type: date
-    sql: ${TABLE}.`Sold Time Dimension`;;
-  }
-
-  dimension: Date_Dimension_Sold_Calendar_Month_Converted {
-    label: "  Sold Calendar Month Converted"
-    group_label: "Date Attributes.Sold Date Dimension"
-    datatype: date
-    type: date_month
-    sql: ${TABLE}.`Sold Calendar Month`;;
-    drill_fields: [Date_Dimension_Sold_Time_Dimension_Converted]
-  }
-
-  dimension: Date_Dimension_Sold_Calendar_Quarter_Converted {
-    label: "   Sold Calendar Quarter Converted"
-    group_label: "Date Attributes.Sold Date Dimension"
-    datatype: date
-    type: date_quarter
-    sql: ${TABLE}.`Sold Calendar Quarter`;;
-    drill_fields: [Date_Dimension_Sold_Calendar_Month_Converted]
-  }
-
-  dimension: Date_Dimension_Sold_Calendar_Year_Converted {
-    label: "    Sold Calendar Year Converted"
-    group_label: "Date Attributes.Sold Date Dimension"
-    datatype: date
-    type: date_year
-    sql: ${TABLE}.`Sold Calendar Year`;;
-    drill_fields: [Date_Dimension_Sold_Calendar_Quarter_Converted]
-  }
 
   }
