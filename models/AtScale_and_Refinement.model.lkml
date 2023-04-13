@@ -9,7 +9,7 @@
 # Project: 10TB - GBQ
 
 connection: "looker_sb_gbq"
-label: "10TB - GBQ"
+label: "AtScale and Refinement"
 
 
 include: "/views/10TB_-_GBQ/*"
