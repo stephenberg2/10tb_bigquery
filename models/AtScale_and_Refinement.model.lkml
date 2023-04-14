@@ -1,4 +1,4 @@
-#Created new model to include AtSclale Model & Refinement(s)
+#Created new model to include AtScale Model & Refinement(s)
 
 #10TB - GBQ AtScale model
 connection: "looker_sb_gbq"
