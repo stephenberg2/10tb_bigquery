@@ -1,45 +1,6 @@
 view: 10TB___GBQ {
     label: "10TB - GBQ"
     sql_table_name: "10TB - GBQ"."10TB - GBQ";;
-    dimension: Customer_Dimension_Customer_City {
-        label: "  Customer City"
-        group_label: "Customer Dimension"
-        type: string
-        sql: ${TABLE}.`Customer City`;;
-        drill_fields: [Customer_Dimension_Customer_Number]
-    }
-
-    dimension: Customer_Dimension_Customer_Country {
-        label: "     Customer Country"
-        group_label: "Customer Dimension"
-        type: string
-        sql: ${TABLE}.`Customer Country`;;
-        drill_fields: [Customer_Dimension_Customer_State]
-    }
-
-    dimension: Customer_Dimension_Customer_County {
-        label: "   Customer County"
-        group_label: "Customer Dimension"
-        type: string
-        sql: ${TABLE}.`Customer County`;;
-        drill_fields: [Customer_Dimension_Customer_City]
-    }
-
-    dimension: Customer_Dimension_Customer_Number {
-        label: " Customer Number"
-        group_label: "Customer Dimension"
-        type: number
-        sql: ${TABLE}.`Customer Number`;;
-    }
-
-    dimension: Customer_Dimension_Customer_State {
-        label: "    Customer State"
-        group_label: "Customer Dimension"
-        type: string
-        sql: ${TABLE}.`Customer State`;;
-        drill_fields: [Customer_Dimension_Customer_County]
-    }
-
     dimension: Customer_Demographics {
         label: "Customer Number"
         group_label: "Customer Information"
@@ -66,6 +27,45 @@ view: 10TB___GBQ {
         group_label: "Customer Information"
         type: string
         sql: ${TABLE}.`d_cd_gender`;;
+    }
+
+    dimension: Customer_Dimension_Customer_City {
+        label: "  Customer City"
+        group_label: "Customer Information.Customer Dimension"
+        type: string
+        sql: ${TABLE}.`Customer City`;;
+        drill_fields: [Customer_Dimension_Customer_Number]
+    }
+
+    dimension: Customer_Dimension_Customer_Country {
+        label: "     Customer Country"
+        group_label: "Customer Information.Customer Dimension"
+        type: string
+        sql: ${TABLE}.`Customer Country`;;
+        drill_fields: [Customer_Dimension_Customer_State]
+    }
+
+    dimension: Customer_Dimension_Customer_County {
+        label: "   Customer County"
+        group_label: "Customer Information.Customer Dimension"
+        type: string
+        sql: ${TABLE}.`Customer County`;;
+        drill_fields: [Customer_Dimension_Customer_City]
+    }
+
+    dimension: Customer_Dimension_Customer_Number {
+        label: " Customer Number"
+        group_label: "Customer Information.Customer Dimension"
+        type: number
+        sql: ${TABLE}.`Customer Number`;;
+    }
+
+    dimension: Customer_Dimension_Customer_State {
+        label: "    Customer State"
+        group_label: "Customer Information.Customer Dimension"
+        type: string
+        sql: ${TABLE}.`Customer State`;;
+        drill_fields: [Customer_Dimension_Customer_County]
     }
 
     dimension: Ship_d_month_of_year {
@@ -405,12 +405,6 @@ view: 10TB___GBQ {
     }
 
 
-    measure: DIVIDE {
-        label: "DIVIDE"
-        type: average
-        sql: ${TABLE}.`DIVIDE`;;
-    }
-
     measure: m_SS_CUSTOMER_SK_count {
         label: "Store Customer Count"
         group_label: "Customer Information"
@@ -558,6 +552,7 @@ view: 10TB___GBQ {
     measure: Average_Web_Unit_Net_Profit {
         label: "Average Web Unit Net Profit"
         group_label: "Web Sales Measures"
+        description: "net profit divided by quanity"
         type: average
         sql: ${TABLE}.`Average Web Unit Net Profit`;;
     }
