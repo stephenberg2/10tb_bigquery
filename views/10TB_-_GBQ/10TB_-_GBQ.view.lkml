@@ -496,6 +496,7 @@ view: 10TB___GBQ {
         label: "Store Quantity Sold"
         group_label: "Store Sales Measures"
         description: "store_sales.ss_quantity_sum"
+        value_format: "#,##0.00"
         type: sum
         sql: ${TABLE}.`m_ss_quantity_sum`;;
     }
