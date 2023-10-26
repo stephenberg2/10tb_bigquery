@@ -13,3 +13,5 @@ include: "/views/10TB_-_GBQ/*"
 explore: 10TB___GBQ {
   label: "10TB - GBQ"
 }
+
+include: "/test.dashboard.lookml"
