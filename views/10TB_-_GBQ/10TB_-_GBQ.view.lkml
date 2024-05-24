@@ -228,6 +228,14 @@ view: 10TB___GBQ {
         drill_fields: [Fulfilling_Warehouse_Warehouse_County]
     }
 
+    dimension: d_I_BRAND_ID {
+        label: "Brand ID Demo"
+        description: "desc"
+        group_label: "Product Attributes"
+        type: number
+        sql: ${TABLE}."d_I_BRAND_ID";;
+    }
+
     dimension: d_i_color {
         label: "Product Color"
         group_label: "Product Attributes"
